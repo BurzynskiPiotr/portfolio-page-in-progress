@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #fafaf3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .title {
+  font-family: "Playfair Display", serif;
+  color: #222;
+  margin: 70px 0 30px 0;
+  font-size: 36px;
+  width: 100%;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav a {
+  font-family: "Montserrat", sans-serif;
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+header nav a:hover {
+  color: #666;
+}
+
+header nav .active-link {
+  color: #666;
+}
+
+footer {
+  font-family: "Playfair Display", serif;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0px 20px 0;
+}
+
+.page-sector {
+  width: 80%;
+  margin: 0 10%;
+}
+
+.home {
+  position: fixed;
+  top: 200px;
+  height: 65vh;
+}
+
+.home .home-details {
+  width: 100%;
+  margin: 100px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px solid #999;
+}
+
+.contact {
+  position: fixed;
+  top: 200px;
+  height: 65vh;
+  border: 1px solid #999;
+}
+
+.contact .contact-details {
+  width: 100%;
+  margin: 100px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px solid #999;
+}
+/*# sourceMappingURL=style.css.map */

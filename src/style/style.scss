@@ -1,0 +1,125 @@
+// fonts & colors & shortcuts
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+
+$font: "Montserrat", sans-serif;
+$font-titles: "Playfair Display", serif;
+
+$grey: #999;
+$grey-medium: #666;
+$grey-dark: #222;
+$cream: #fafaf3;
+
+$rwd-phone: "only screen and (max-width : 320px)";
+$rwd-mobile: "only screen and (max-width : 480px)";
+$rwd-tablet: "only screen and (max-width : 768px)";
+$rwd-landscape: "only screen and (max-width : 1024px)";
+
+@mixin flexCenter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+
+// -- app design -- //
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: $cream;
+  transition: 0.3s;
+}
+
+// header & nav desing
+
+header {
+  width: 100%;
+  @include flexCenter();
+
+  .title {
+    font-family: $font-titles;
+    color: $grey-dark;
+    margin: 70px 0 30px 0;
+    font-size: 36px;
+    width: 100%;
+    text-transform: uppercase;
+    @include flexCenter();
+  }
+
+  nav {
+    a {
+      font-family: $font;
+      color: $grey;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0 10px;
+      font-size: 12px;
+      cursor: pointer;
+
+      &:hover {
+        color: $grey-medium;
+      }
+    }
+
+    .active-link {
+      color: $grey-medium;
+    }
+  }
+}
+
+// footer
+
+footer {
+  font-family: $font-titles;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  @include flexCenter();
+  padding: 10px 0px 20px 0;
+}
+
+// page sectors
+
+.page-sector {
+  width: 80%;
+  margin: 0 10%;
+}
+
+// single sectors
+
+.home {
+  position: fixed;
+  top: 200px;
+  height: 65vh;
+
+  .home-details {
+    width: 100%;
+    margin: 100px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid $grey;
+  }
+}
+
+.contact {
+  position: fixed;
+  top: 200px;
+  height: 65vh;
+  border: 1px solid $grey;
+
+  .contact-details {
+    width: 100%;
+    margin: 100px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid $grey;
+  }
+}
