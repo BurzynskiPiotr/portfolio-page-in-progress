@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -83,6 +84,8 @@ footer {
 .page-sector {
   width: 80%;
   margin: 0 10%;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 100px;
 }
 
 .home {
@@ -91,12 +94,145 @@ footer {
   height: 65vh;
 }
 
+.home .slide-from-right-animation {
+  -webkit-animation: slide-from-right 1s ease;
+          animation: slide-from-right 1s ease;
+  position: absolute;
+  top: -200px;
+}
+
 .home .home-details {
+  -webkit-animation: slide-opacity 1s ease;
+          animation: slide-opacity 1s ease;
+  border-bottom: 1px solid #999;
   width: 100%;
-  margin: 100px 0 0 0;
+  max-height: 200px;
   position: absolute;
   bottom: 0;
-  border-bottom: 1px solid #999;
+  font-weight: lighter;
+}
+
+.home .home-details .title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.home .home-details article {
+  font-size: 18px;
+}
+
+.home .home-details article p {
+  margin-bottom: 10px;
+}
+
+.about {
+  -webkit-animation: slide-opacity 1s ease;
+          animation: slide-opacity 1s ease;
+  margin-top: 30px;
+  border-top: 1px solid #999;
+}
+
+.about .about-intro {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about-intro article {
+  margin-left: 30px;
+}
+
+.about .about-intro article .title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: #222;
+}
+
+.about .about-intro article p {
+  text-align: justify;
+  color: #666;
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+.about .about-intro img {
+  max-width: 300px;
+}
+
+.about .arrow {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  margin-top: 50px;
+  right: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.about .arrow__arrows {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.about .arrow__arrows span {
+  position: relative;
+  width: 14px;
+  height: 1px;
+  overflow: hidden;
+  background: #999;
+  z-index: 2;
+}
+
+.about .arrow__arrows span:nth-child(1) {
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(45deg) translate3d(9px, -10px, 0);
+          transform: rotate(45deg) translate3d(9px, -10px, 0);
+}
+
+.about .arrow__arrows span:nth-child(2) {
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.about .arrow__arrows span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: black;
+}
+
+.about .arrow__arrows span:after {
+  -webkit-animation: animation-arrow 1.5s infinite;
+          animation: animation-arrow 1.5s infinite;
+}
+
+.about .about-more {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #666;
+  margin-top: 200px;
 }
 
 .contact {
@@ -112,5 +248,81 @@ footer {
   position: absolute;
   bottom: 0;
   border-bottom: 1px solid #999;
+}
+
+@-webkit-keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    left: -50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    left: -50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slide-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animation-line {
+  0% {
+    left: 80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes animation-line {
+  0% {
+    left: 80px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes animation-arrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animation-arrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
