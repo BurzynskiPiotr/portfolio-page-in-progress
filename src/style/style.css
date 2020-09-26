@@ -9,6 +9,10 @@
   transition: 0.3s;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 header {
   width: 100%;
   display: -webkit-box;

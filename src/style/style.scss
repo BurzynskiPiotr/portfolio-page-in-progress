@@ -40,6 +40,10 @@ $rwd-landscape: "only screen and (max-width : 1024px)";
   transition: 0.3s;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 // header & nav desing
 
 header {
