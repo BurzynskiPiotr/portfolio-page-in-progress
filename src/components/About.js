@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import portret from "../media/portret.jpg";
+import { Link } from "react-scroll";
 
 class About extends Component {
   render() {
@@ -36,15 +37,71 @@ class About extends Component {
           </article>
         </div>
 
-        <div className="arrow">
-          <span className="arrow__arrows">
-            <span></span>
-            <span></span>
-          </span>
-        </div>
+        <Link
+          activeClass="active"
+          to="about-more"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+        >
+          <div className="arrow">
+            <span className="arrow__arrows">
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </Link>
 
         <div className="about-more">
-          <p>more stuff</p>
+          <p className="title-main">Moje pięć przymiotników.</p>
+          <div className="about-articles">
+            <article>
+              <p className="title">Ambitny</p>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+            </article>
+            <article>
+              <p className="title">Kreatywny</p>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+            </article>
+            <article>
+              <p className="title">Futurystyczny</p>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+            </article>
+            <article>
+              <p className="title">Głodny wiedzy</p>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+            </article>
+            <article>
+              <p className="title">Zdecydowany</p>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+            </article>
+          </div>
         </div>
       </div>
     );
